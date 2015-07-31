@@ -75,5 +75,20 @@ function playToFive() {
     return [playerWins, computerWins];
 }
 
+function playTo(x){
+
+for (var i = 0; i < x; i++){
+       var winner = getWinner(getPlayerMove(), getComputerMove());
+       if (winner === "player"){
+          playerWins++;
+       }
+       else if (winner === "computer"){
+          computerWins++;
+       }
+   }
+    return [playerWins, computerWins];
+
+}
+
 console.log(playToFive());
 
